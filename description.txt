@@ -1,0 +1,10 @@
+This project is a simple RESTful API built in Go using the Gorilla Mux router to manage a collection of employee records. The API allows users to perform CRUD operations (Create, Read, Update, Delete) on employee data, which includes fields like ID, name, email, and college details (college name and address). The data is stored in memory as a slice of Employee structs and is not persisted to a database. The API uses JSON for data exchange, and you tested the endpoints using Postman, a popular tool for API testing.
+
+
+
+The API provides the following endpoints, handled by the Gorilla Mux router:
+
+GET /employees: Retrieves the list of all employees.
+GET /employees/{id}: Retrieves a single employee by their ID.
+POST /employees: Creates a new employee with a randomly generated ID.
+DELETE /employees/{id}: Deletes an employee by their ID.

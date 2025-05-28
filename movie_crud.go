@@ -16,8 +16,8 @@ type Movie struct{
 	Director *Director `json:"director"`
 }
 type Director struct{
-	Firstname string `json:"firstname`
-	Lastname string `json:"lastname`
+	Firstname string `json:"firstname"`
+	Lastname string `json:"lastname"`
 }
 var movies []Movie
 
@@ -75,7 +75,6 @@ func updateMovie(w http.ResponseWriter,r *http.Request){
 func main(){
 	r:=mux.NewRouter()
 	movies= append(movies,Movie{ID:"1",Isbn: "4255",Title: "BAHUBALI",Director: &Director{Firstname: "john",Lastname: "ran"}})
-	r.HandleFunc("/movies",getMovies).Methods("GET")
 	movies= append(movies,Movie{ID:"2",Isbn: "4886",Title: "king of kotha",Director: &Director{Firstname: "ryan",Lastname: "don"}})
 	r.HandleFunc("/movies",getMovies).Methods("GET")
 	r.HandleFunc("/movies/{id}",getMovie).Methods("GET")
