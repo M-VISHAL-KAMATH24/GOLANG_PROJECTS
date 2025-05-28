@@ -1,0 +1,11 @@
+# Go-specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+tmp/
+
+# VS Code
+.vscode/
